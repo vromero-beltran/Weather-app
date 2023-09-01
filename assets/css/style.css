@@ -150,7 +150,7 @@ body {
 
 .m-icon {
   font-family: 'Material Symbols Rounded';
-  font-style: normal;
+  font-weight: normal;
   font-style: normal;
   font-size: 2.4rem;
   line-height: 1;
@@ -296,7 +296,6 @@ title-3 {
   #HEADER
 \*-----------------------------------*/
 
-
 .header .btn-primary .span { display: none; }
 
 .logo img { width: 150px; }
@@ -319,7 +318,7 @@ title-3 {
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100svh;
+  height: 100svh; /* For mobile users */
   background-color: var(--surface);
   color: var(--on-surface);
   clip-path: circle(4% at calc(100% - 102px) 5%);
@@ -329,7 +328,7 @@ title-3 {
   transition: clip-path 500ms ease;
 }
 
-.search-view {
+.search-view.active {
   opacity: 1;
   visibility: visible;
   clip-path: circle(130% at 73% 5%);
@@ -373,14 +372,14 @@ title-3 {
 
 .search-field::-webkit-search-cancel-button { display: none; }
 
-.search-wrapper .leading-ican {
+.search-wrapper .leading-icon {
   position: absolute;
   top: 50%;
   left: 28px;
   transform: translate(-50%, -50%);
 }
 
-.search-wrapper > .m-ican { display: none; }
+.search-wrapper > .m-icon { display: none; }
 
 .search-wrapper .icon-btn {
   background-color: transparent;
@@ -399,7 +398,7 @@ title-3 {
   padding-inline: 16px 24px;
 }
 
-.search-view .view-item :is(.micon, .item-subtitle) {
+.search-view .view-item :is(.m-icon, .item-subtitle) {
   color: var(--on-surface-variant);
 }
 
@@ -417,7 +416,7 @@ title-3 {
 
 main {
   height: calc(100vh - 80px);
-  height: calc(100svh - 80px);
+  height: calc(100svh - 80px); /* for mobile browser*/
   overflow: hidden;
 }
 
@@ -427,7 +426,7 @@ article.container {
   grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: auto; /* for firefox*/
   overflow-y: overlay;
 }
 
@@ -466,7 +465,7 @@ article.container::before {
   align-items: center;
 }
 
-.current-weather-card .weather-ican { margin-inline: auto; }
+.current-weather-card .weather-icon { margin-inline: auto; }
 
 .current-weather-card > .body-3 { text-transform: capitalize; }
 
@@ -535,8 +534,8 @@ article.container::before {
   margin-block-end: 20px;
 }
 
-.highlights .card-sm {
-  background-color: var(--black --black-alpha-10);
+.highlight .card-sm {
+  background-color: var(--black-alpha-10);
   position: relative;
 }
 

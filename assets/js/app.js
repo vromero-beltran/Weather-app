@@ -65,7 +65,7 @@ searchField.addEventListener("input", function () {
                 <div>
                     <p class="item-subtitle">${name}</p>
 
-                    <p class="label-2 item-subtitle">${state || ""}, ${country}</p>
+                    <p class="label-2 item-subtitle">${state || ""} ${country}</p>
                 </div>
 
                 <a href="#/waether?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
@@ -136,13 +136,13 @@ export const updateWeather = function (lat, lon) {
 
         card.innerHTML = `
         <div class="weapper">
-            <p class="header">${parseInt(temp)}<sup>c</sup></p>
+            <p class="heading">${parseInt(temp)}<sup>c</sup></p>
 
             <img src="./assets/images/weather_icons/${icon}png" width="64" height="64" alt="${description}" class="weather-icon">
         </div>
         <p class="body-3">${description}</p>
 
-        <ul class="meta-li">
+        <ul class="meta-list">
 
             <li class="meta-item">
                 <span class="m-icon">calender_today</span>
@@ -153,7 +153,7 @@ export const updateWeather = function (lat, lon) {
             <li class="meta-item">
                 <span class="m-icon">location_on</span>
 
-                <p class="title-3 meta-text" data-location></p>
+                <p class="title-3 meta-text">data-location></p>
             </li>
 
         </ul>
