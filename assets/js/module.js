@@ -52,7 +52,7 @@ export const getData = function(dateUnix, timezone) {
  * @returns {string} Time string. formate: "HH AM/PM"
  */
 
-export const getHours = function(timeUnix, timezone) {
+export const getDate = function(timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
     const hours = data.getUTCHours();
     const period = hours >= 12 ? "PM" : "AM";

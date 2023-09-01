@@ -74,6 +74,11 @@ searchField.addEventListener("input", function () {
             searchResult.quarySelector("[data-search-lisy]").appendChild(searchItem);
             items.push(searchItem.querySelector("[data-search-toggler]"));
             }   
+
+            addEventOnElement(items, "click", function () {
+                toggleSearch();
+                searchResult.classList.remove("active");
+            })
             });
         }, searchTimeoutDuration);
     }
@@ -93,9 +98,9 @@ const errorContent = document.querySelector("[data-error-content]");
  */
 
 export const updateWeather = function (lat, lon) {
-    loading.computedStyleMap,display = "grid";
+    //loading.computedStyleMap,display = "grid";
     container.computedStyleMap.overflow = "hidden";
-    container.classList.contains("fade-in") ??container.classList.remove("fade-in");
+    container.classList.contains("fade-in");
     errorContent.style.display = "none";
 
     const currentWeatherSection = document.querySelector("[data-current-weather]");
@@ -124,7 +129,43 @@ export const updateWeather = function (lat, lon) {
             visibility,
             timezone
         } = currentWeather
-        const [] = weather
+        const [{ description, icon }] = weather;
+
+        const card = document.createElement("div");
+        card.classList.add("card", "card-lg", "current-weather-card");
+
+        card.innerHTML = `
+        <div class="weapper">
+            <p class="header">${parseInt(temp)}<sup>c</sup></p>
+
+            <img src="./assets/images/weather_icons/${icon}png" width="64" height="64" alt="${description}" class="weather-icon">
+        </div>
+        <p class="body-3">${description}</p>
+
+        <ul class="meta-li">
+
+            <li class="meta-item">
+                <span class="m-icon">calender_today</span>
+
+                <p class="title-3 meta-text">${module.getDate(dateUnix, timezone)}</p>
+            </li>
+
+            <li class="meta-item">
+                <span class="m-icon">location_on</span>
+
+                <p class="title-3 meta-text" data-location></p>
+            </li>
+
+        </ul>
+        `;
+
+        fetchData(url.reverseGeo(lat, lon), function([{ name, country }]) {
+            card.quarySelector("[data-location]").innerHTML = `${name}, ${country}`
+        })
+
+        currentWeatherSection.appendChild(card);
 
     });
 }
+
+export const error404 = function () { }
