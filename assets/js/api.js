@@ -6,7 +6,7 @@
  */
 
 
-'use string';
+'use strict';
 
 const api_key = "fc302ec03c33c3d3415386f562e11de4";
 
