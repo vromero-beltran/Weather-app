@@ -16,7 +16,7 @@ const api_key = "fc302ec03c33c3d3415386f562e11de4";
  * @param {Function} callback callback
 */
 export const fetchData = function(URL, callback) {
-    fetch('${URL}&appid=${api_key}')
+    fetch(`${URL}&appid=${api_key}`)
     .then(res => res.json())
     .then(data => callback(data));
 }
@@ -26,7 +26,7 @@ export const url = {
         return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     forecast(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=${hourly}&appid=fc302ec03c33c3d3415386f562e11de4`
+        return `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     airPollution(lat, lon) {
         return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
