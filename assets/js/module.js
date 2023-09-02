@@ -42,7 +42,7 @@ export const getDate = function(dateUnix, timezone) {
     const weekDayName = weekDayNames[data.getUTCDay()];
     const monthName = monthNames[data.getUTCMonth()];
 
-    return `${weekDayName} ${data.getUTCDay()} ${monthName}`;
+    return `${weekDayName} ${date.getUTCDay()} ${monthName}`;
 }
 
 /**
@@ -54,8 +54,8 @@ export const getDate = function(dateUnix, timezone) {
 
 export const getTime = function(timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
-    const hours = data.getUTCHours();
-    const minutes = data.getUTCHours();
+    const hours = date.getUTCHours();
+    const minutes = date.getUTCHours();
     const period = hours >= 12 ? "PM" : "AM";
 
     return `${hours % 12 || 12}:${minutes} ${period}`;
@@ -70,7 +70,7 @@ export const getTime = function(timeUnix, timezone) {
 
 export const getHours = function(timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
-    const hours = data.getUTCHours();
+    const hours = date.getUTCHours();
     const period = hours >= 12 ? "PM" : "AM";
 
     return `${hours % 12 || 12} ${period}`;
