@@ -44,7 +44,7 @@ const checkHash = function () {
 window.addEventListener("hashchange", checkHash);
 
 window.addEventListener("load", function () {
-    if (!this.window.location.hash) {
+    if (!window.location.hash) {
         window.location.hash ="#/current-location";
     } else {
         checkHash();
