@@ -32,7 +32,7 @@ export const url = {
         return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     reverseGeo(lat, lon) {
-        return `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit={limit}&appid=fc302ec03c33c3d3415386f562e11de4`
+        return `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     /**
      * 
