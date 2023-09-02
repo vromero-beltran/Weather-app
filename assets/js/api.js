@@ -26,7 +26,7 @@ export const url = {
         return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     forecast(lat, lon) {
-        return `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${hourly}&appid=fc302ec03c33c3d3415386f562e11de4`
+        return `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=${hourly}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     airPollution(lat, lon) {
         return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
