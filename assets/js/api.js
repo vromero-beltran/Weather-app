@@ -23,16 +23,17 @@ export const fetchData = function(URL, callback) {
 
 export const url = {
     currentWeather(lat, lon) {
-        return `http://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric`
+        return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     forecast(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric`
+        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric
+        https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     airPollution(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`
+        return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     reverseGeo(lat, lon) {
-        return `https://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`
+        return `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit={limit}&appid=fc302ec03c33c3d3415386f562e11de4`
     },
     /**
      * 
@@ -40,7 +41,7 @@ export const url = {
      * @returns 
      */
     goe(query) {
-        return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`
+        return `http://api.openweathermap.org/geo/1.0/direct?q=${Name},${state},${country}&limit=5&appid=fc302ec03c33c3d3415386f562e11de4`
     }
     
 }

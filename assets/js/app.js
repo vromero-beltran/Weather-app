@@ -147,7 +147,7 @@ export const updateWeather = function (lat, lon) {
             <li class="meta-item">
                 <span class="m-icon">calender_today</span>
 
-                <p class="title-3 meta-text">${module.getDate(dateUnix, timezone)}</p>
+                <p class="title-3 meta-text">${module.getDate(dataUnix, timezone)}</p>
             </li>
 
             <li class="meta-item">
@@ -203,7 +203,7 @@ export const updateWeather = function (lat, lon) {
                             </li>
 
                             <li class="card-item">
-                                <p class="title-1">${so2.toPrecision(3)}</p>
+                                <p class="title-1">${no2.toPrecision(3)}</p>
 
                                 <p class="label-1">NO<sub>2</sub></p>
                             </li>
