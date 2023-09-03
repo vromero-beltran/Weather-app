@@ -125,7 +125,7 @@ export const updateWeather = function (lat, lon) {
         const {
             weather,
             dt: dataUnix,
-            sys: { sunise: sunriseUnixUTC, sunset: sunsetUnixUTC},
+            sys: { sunrise: sunriseUnixUTC, sunset: sunsetUnixUTC},
             main: { temp, feels_like, pressure, humidity },
             visibility,
             timezone
