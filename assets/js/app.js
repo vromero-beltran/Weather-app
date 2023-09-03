@@ -17,7 +17,7 @@ import * as module from "./module.js";
  */
 
 const addEventOnElement = function(elements, eventType, callback) {
-    for (const element of elements) element.addEventOnElement(eventType, callback);
+    for (const element of elements) element.addEventListener(eventType, callback);
 }
 
 const searchView = document.querySelectorAll("[data-search-view]");
@@ -68,7 +68,8 @@ searchField.addEventListener("input", function () {
                     <p class="label-2 item-subtitle">${state || ""} ${country}</p>
                 </div>
 
-                <a href="#/waether?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
+                <a href="#/waether?lat=${lat}&lon=${lon}" class="item-link has-state"
+                aria-label="${name} weather" data-search-toggler></a>
             `;
 
             searchResult.querySelector("[data-search-list]").appendChild(searchItem);
