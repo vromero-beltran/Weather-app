@@ -71,7 +71,7 @@ searchField.addEventListener("input", function () {
                 <a href="#/waether?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
             `;
 
-            searchResult.querySelector("[data-search-lisy]").appendChild(searchItem);
+            searchResult.querySelector("[data-search-list]").appendChild(searchItem);
             items.push(searchItem.querySelector("[data-search-toggler]"));
             }   
 
