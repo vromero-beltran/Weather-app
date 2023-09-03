@@ -40,7 +40,7 @@ export const url = {
      * @returns 
      */
     goe(query) {
-        return `http://api.openweathermap.org/geo/1.0/direct?q=${Name},${state},${country}&limit=5&appid=de744c62ee2c2ae907c823148e7daa41`
+        return `http://api.openweathermap.org/geo/1.0/direct?q=${query},${state},${country}&limit=5&appid=de744c62ee2c2ae907c823148e7daa41`
     }
     
 }
