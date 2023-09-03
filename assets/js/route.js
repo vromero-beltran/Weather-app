@@ -18,7 +18,6 @@ const currentLocation = function() {
     }, _err => {
         window.location.hash = defaultLocation;
     });
-
 }
 
 /**
