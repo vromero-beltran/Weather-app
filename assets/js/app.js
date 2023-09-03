@@ -154,14 +154,15 @@ export const updateWeather = function (lat, lon) {
             <li class="meta-item">
                 <span class="m-icon">location_on</span>
 
-                <p class="title-3 meta-text">data-location></p>
+                <p class="title-3 meta-text" data-location></p>
             </li>
 
         </ul>
         `;
 
-        fetchData(url.reverseGeo(lat, lon), function([{ name, country }]) {
-            card.querySelector("[data-location]").innerHTML = `${name}, ${country}`
+        fetchData(url.reverseGeo(lat, lon), function ([{ name, country }]) {
+            card.querySelector("[data-location]").innerHTML = `${name}, ${country}
+            `
         })
 
         currentWeatherSection.appendChild(card);
@@ -395,7 +396,7 @@ export const updateWeather = function (lat, lon) {
                     dt_txt
                 } = forecastList[i]
                 const [{ icon , description }] = weather
-                const date = new DataTransfer(dt_txt);
+                const date = new Date(dt_txt);
 
                 const li = document.createElement("li");
                 li.classList.add("card-item");
