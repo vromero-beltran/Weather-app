@@ -412,7 +412,7 @@ export const updateWeather = function (lat, lon) {
                     </span>
                     </div>
 
-                    <p class="label-1">${date.getUTCData()} ${module.monthNames[date.getUTCMonth()]}</p>
+                    <p class="label-1">${date.getUTCDate()} ${module.monthNames[date.getUTCMonth()]}</p>
 
                     <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>
                 `;
